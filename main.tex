@@ -1,0 +1,26 @@
+% !TeX TXS-program:bibliography = txs:///biber
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[citestyle=authoryear,maxnames=10,backend=biber]{biblatex}
+
+\nocite{*}
+\title{Biblatex tests}
+\author{lars.vilhuber }
+\date{February 2014}
+
+
+
+\addbibresource[location=remote]{https://www.ncrn.info/documents/bibliographies/export/bibtex}
+%\addbibresource{Biblio-Bibtex.bib}
+
+\begin{document}
+
+
+
+\printbibliography[type=article,title={Articles}]
+\printbibliography[type=report,title={Preprints and Working papers}]
+\printbibliography[nottype=report,nottype=article,title={Other publications}]
+
+\end{document}
