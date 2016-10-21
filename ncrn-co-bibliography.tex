@@ -3,6 +3,15 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
+\usepackage[%
+plainpages,%
+colorlinks,%
+urlcolor=black,%
+filecolor=black,%
+pdfpagemode=UseOutlines,%
+pdfauthor={Lars Vilhuber},%
+pdfsubject={Bibliography},%
+]{hyperref}
 \usepackage[citestyle=authoryear,maxnames=10,backend=biber]{biblatex}
 
 \nocite{*}
@@ -16,11 +25,18 @@
 %\addbibresource{Biblio-Bibtex.bib}
 
 \begin{document}
+\maketitle
 
-
+This bibliography is generated for the NSF-Census Research Network (NCRN) from data made available at \url{http://www.ncrn.info}. Articles are in alphabetical order of the first author's last name.
 
 \printbibliography[type=article,title={Articles}]
 \printbibliography[type=report,title={Preprints and Working papers}]
 \printbibliography[nottype=report,nottype=article,title={Other publications}]
+\newpage
+\begin{quote}
+	\footnotesize
+This bibliography can be easily recreated by cloning our git repository at \url{https://github.com/labordynamicsinstitute/ncrncobib}. The bibliographic database is downloaded directly from \url{https://www.ncrn.info/documents/bibliographies/export/bibtex} during the compilation, the document is thus always current when compiled.
 
+
+\end{quote}
 \end{document}
